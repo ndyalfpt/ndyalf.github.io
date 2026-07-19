@@ -294,6 +294,47 @@
   .gallery-info h3{ font-size: 15px; font-weight:600; margin-bottom: 2px; }
   .gallery-info h3 .zh{ display:block; font-size: 12px; font-weight: 400; margin-top: 2px; }
   .gallery-info .tag{ margin:0; }
+  @media (min-width: 721px) {
+  .gallery {
+    display: flex;
+    gap: 18px;
+  }
+  .gallery-item {
+    flex: 1;
+    transition: flex 0.5s ease, border-color .2s, transform .2s;
+  }
+  .gallery-item:hover {
+    flex: 2.5;
+  }
+  .gallery:hover .gallery-item:not(:hover) {
+    flex: 0.6;
+  }
+}
+
+.gallery-item {
+  position: relative;
+}
+.gallery-item::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: calc(var(--radius) + 2px);
+  padding: 2px;
+  background: conic-gradient(from 0deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #ff6b6b);
+  opacity: 0;
+  transition: opacity .3s ease;
+  animation: rotate-border 3s linear infinite;
+  pointer-events: none;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.gallery-item:hover::before {
+  opacity: 1;
+}
+@keyframes rotate-border {
+  to { transform: rotate(360deg); }
+}
 
   /* ---------- SKILLS: diff style ---------- */
   .skills-cols{ display:grid; grid-template-columns: 1fr 1fr; gap: 20px; }
