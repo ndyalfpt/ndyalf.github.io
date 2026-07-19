@@ -208,6 +208,10 @@
     border-radius: 20px; border: 1px solid var(--line); color: var(--muted);
     display:inline-flex; gap:6px; align-items:center;
   }
+  .tag-neutral svg {
+  flex-shrink: 0;
+  opacity: 0.8;
+}
   .tag .zh{ font-size: 11px; }
   .hero-cta{ display:flex; gap: 12px; flex-wrap:wrap; }
   .btn{
@@ -393,10 +397,8 @@
       <div class="scanline"></div>
       <div class="terminal-bar">
         <span></span><span></span><span></span>
-        <div class="label">whoami.sh</div>
       </div>
       <div class="terminal-body">
-        <div class="prompt">visitor@web:~$ <span class="cmd">./whoami</span></div>
         <h1 id="typedName">Hi, I'm <span style="color:var(--add)">Nabila Nindya Alifia Putri</span><span class="caret"></span></h1>
         <div class="zh-name">你好，我是纳比拉·宁迪亚·阿丽菲亚·普特里</div>
         <p class="tagline">
@@ -404,10 +406,15 @@
           <span class="zh">研究员兼视觉设计师。我喜欢深入挖掘数据，直到它变成有意义的发现，也喜欢把想法转化为赏心悦目的视觉作品。</span>
         </p>
         <div class="hero-tags">
-          <span class="tag">Quantitative Research <span class="zh">定量研究</span></span>
-          <span class="tag">Qualitative Research <span class="zh">定性研究</span></span>
-          <span class="tag">Design & Illustration <span class="zh">设计与插画</span></span>
-        </div>
+  <span class="tag tag-neutral">
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
+    Universitas Islam Internasional Indonesia
+  </span>
+  <span class="tag tag-neutral">
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11a7 7 0 0114 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+    Indonesia, ID
+  </span>
+</div>
         <div class="hero-cta">
           <a class="btn btn-primary" href="#research">View research <span class="zh">查看研究</span></a>
           <a class="btn btn-ghost" href="#design">View design work <span class="zh">查看设计作品</span></a>
