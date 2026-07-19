@@ -591,12 +591,12 @@
   }
 </script>
 <script>
-const navLinks = document.querySelectorAll('.nav-links a');
+const magnifyLinks = document.querySelectorAll('.nav-links a');
 const maxScale = 1.35;
 const effectRadius = 80;
 
 document.querySelector('.nav-links').addEventListener('mousemove', (e) => {
-  navLinks.forEach(link => {
+  magnifyLinks.forEach(link => {
     const rect = link.getBoundingClientRect();
     const linkCenter = rect.left + rect.width / 2;
     const distance = Math.abs(e.clientX - linkCenter);
@@ -611,7 +611,7 @@ document.querySelector('.nav-links').addEventListener('mousemove', (e) => {
 });
 
 document.querySelector('.nav-links').addEventListener('mouseleave', () => {
-  navLinks.forEach(link => link.style.transform = 'scale(1)');
+  magnifyLinks.forEach(link => link.style.transform = 'scale(1)');
 });
 </script>
 </body>
