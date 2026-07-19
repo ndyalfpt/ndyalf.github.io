@@ -371,6 +371,13 @@
   color: var(--bg);
   opacity: 1;
 }
+  .gradient-text {
+  background: linear-gradient(90deg, #2d5a3d, #5fbf77, #a8ffc0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
 </style>
 </head>
 <body>
@@ -399,7 +406,7 @@
         <span></span><span></span><span></span>
       </div>
       <div class="terminal-body">
-        <h1 id="typedName">Hi, I'm <span style="color:var(--add)">Nabila Nindya Alifia Putri</span><span class="caret"></span></h1>
+        <h1 id="typedName">Hi, I'm <span class="gradient-text">Nabila Nindya Alifia Putri</span><span class="caret"></span></h1>
         <div class="zh-name">你好，我是纳比拉·宁迪亚·阿丽菲亚·普特里</div>
         <p class="tagline">
           Researcher and visual designer. I enjoy digging through data until it becomes a meaningful finding, and turning ideas into visuals that are pleasant to look at.
